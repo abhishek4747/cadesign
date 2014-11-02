@@ -35,6 +35,5 @@ function [] = fibo(n)
         if ~(i == 1)
             dirn = dirn * scale(fib(2)/fib(1), fib(2)/fib(1));
         end    
-        fib
         fib = fib*next;
     end
