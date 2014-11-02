@@ -15,24 +15,26 @@ function [] = fibo(n)
     for i = 1:n
         plot(xs,ys,'k-');
         plot(xc,yc,'b-');
-                
         transform = trans(-xs(1), -ys(1));
         transform = transform * scale(fib(3)/fib(2), fib(3)/fib(2));
         transform = transform * rot(pi/2);
         transform = transform * trans(xs(1), ys(1));
-        transform = transform * trans(dirn(1), dirn(2));
-        
+        if ~(i == 1)
+            transform = transform * trans(dirn(1), dirn(2));
+        end
         m = ([xs' ys' ones(5,1)] * transform)';
-        xs = m(:,1);
-        ys = m(:,2);
+        xs = m(1,:);
+        ys = m(2,:);
         m = ([xc' yc' ones(100,1)] * transform)';
-        xc = m(:,1);
-        yc = m(:,2);
+        xc = m(1,:);
+        yc = m(2,:);
         
         temp = dirn*scale(fib(1), fib(1));
         center = center * trans(temp(1), temp(2));
         dirn = dirn * rot(pi/2);
-        dirn = dirn * scale(fib(3)/fib(2), fib(3)/fib(2));
-        
+        if ~(i == 1)
+            dirn = dirn * scale(fib(2)/fib(1), fib(2)/fib(1));
+        end    
+        fib
         fib = fib*next;
     end

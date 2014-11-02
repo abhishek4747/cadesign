@@ -29,5 +29,6 @@ end
 
 function plotPoints(points)
     figure;
+    axis equal;
     plot(points(:,1),points(:,2));
 end
