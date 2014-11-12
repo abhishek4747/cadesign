@@ -29,6 +29,7 @@ end
 
 function plotPoints(points)
     figure;
-    axis equal;
+    axis([min(points(:,1)) max(points(:,1)) min(points(:,2)) max(points(:,2))] )
     plot(points(:,1),points(:,2));
+    axis equal;
 end
