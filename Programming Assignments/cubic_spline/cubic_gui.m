@@ -101,7 +101,7 @@ function generate_curve(handles)
     
     B1 = p1;
     B2 = p1_;
-    B3 = (3*(p2-p1/t2^2 - 2*p1_/t2 - p2_/t2 ));
+    B3 = (3*(p2-p1)/t2^2 - 2*p1_/t2 - p2_/t2 );
     B4 = (2*(p1-p2)/t2^3 + p1_/t2^2 + p2_/t2^2);
     curv = B1*ones(1,length(t)) + B2*t + B3*(t.*t) + B4*(t.*t.*t);
 
@@ -109,6 +109,7 @@ function generate_curve(handles)
     hold on;
     plot(p1(1),p1(2),'o');
     plot(p2(1),p2(2),'o');
+    %axis([min()-1 max()+1 min()-1 max()+1]);
     hold off;
 
 
