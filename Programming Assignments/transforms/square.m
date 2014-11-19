@@ -76,7 +76,7 @@ axes(handles.axes1);
 points = [1 1 1; -1 1 1; -1 -1 1; 1 -1 1; 1 1 1];
 s=1;
 theta=0;
-p=points*rot(theta*pi/180)*scale(s);
+p=points*rot(theta*pi/180)*scale2(s);
 plot(p(:,1), p(:,2));
 axis([-30 30 -30 30]);
 axis square;
@@ -93,7 +93,7 @@ function slider1_Callback(hObject, eventdata, handles)
 s=get(hObject,'Value');
 theta=get(handles.slider3,'Value');
 points = [1 1 1; -1 1 1; -1 -1 1; 1 -1 1; 1 1 1];
-p=points*rot(theta*pi/180)*scale(s);
+p=points*rot(theta*pi/180)*scale2(s);
 plot(p(:,1), p(:,2));
 axis([-30 30 -30 30]);
 axis square;
@@ -125,7 +125,7 @@ function slider3_Callback(hObject, eventdata, handles)
 theta=get(hObject,'Value');
 s=get(handles.slider1,'Value');
 points = [1 1 1; -1 1 1; -1 -1 1; 1 -1 1; 1 1 1];
-p=points*rot(theta*pi/180)*scale(s);
+p=points*rot(theta*pi/180)*scale2(s);
 plot(p(:,1), p(:,2));
 axis([-30 30 -30 30]);
 axis square;
@@ -157,7 +157,7 @@ s=str2double(get(hObject,'String'));
 set(handles.slider1,'value',s)
 theta=get(handles.slider3,'Value');
 points = [1 1 1; -1 1 1; -1 -1 1; 1 -1 1; 1 1 1];
-p=points*rot(theta*pi/180)*scale(s);
+p=points*rot(theta*pi/180)*scale2(s);
 plot(p(:,1), p(:,2));
 axis([-30 30 -30 30]);
 axis square;
@@ -187,7 +187,7 @@ theta=str2double(get(hObject,'String'));
 set(handles.slider3,'value',theta)
 s=get(handles.slider1,'Value');
 points = [1 1 1; -1 1 1; -1 -1 1; 1 -1 1; 1 1 1];
-p=points*rot(theta*pi/180)*scale(s);
+p=points*rot(theta*pi/180)*scale2(s);
 plot(p(:,1), p(:,2));
 axis([-30 30 -30 30]);
 axis square;
