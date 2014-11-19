@@ -1,4 +1,4 @@
-function [] = ellipse(a,b,xc,yc)
+function [] = ellipse(a,b)
     x = linspace(-a,a,ceil(200*a));
     y1 = zeros(ceil(200*a),1);
     y2 = zeros(ceil(200*a),1);
@@ -7,7 +7,8 @@ function [] = ellipse(a,b,xc,yc)
         y2(i) = -b*sqrt(1-((x(i)*x(i))/(a*a)));
     end
     figure;
-    plot(x+xc,y1+yc);
+    plot(x,y1);
     hold on;
-    plot(x+xc,y2+yc);
+    plot(x,y2);
+    axis equal;
     hold off;
