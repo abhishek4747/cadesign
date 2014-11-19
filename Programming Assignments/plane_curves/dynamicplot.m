@@ -79,7 +79,7 @@ varargout{1} = handles.output;
 axes(handles.axes1);
 r=5;
 theta=0:1:360;
-plot(r*cos(theta),r*sin(theta));
+plot(r*cos(theta*pi/180),r*sin(theta*pi/180));
 axis([-20 20 -20 20]);
 axis square;
 
@@ -95,7 +95,7 @@ function slider1_Callback(hObject, eventdata, handles)
 r=get(hObject,'Value');
 axes(handles.axes1);
 theta = 0:1:360;
-plot(r*cos(theta),r*sin(theta));
+plot(r*cos(theta*pi/180),r*sin(theta*pi/180));
 axis([-20 20 -20 20]);
 axis square;
 set(handles.edit1,'string',r)
@@ -125,13 +125,13 @@ function edit1_Callback(hObject, eventdata, handles)
 %        str2double(get(hObject,'String')) returns contents of edit1 as a double
 
 % ..........the following code edited by user
-n=str2double(get(hObject,'String'));
+r=str2double(get(hObject,'String'));
 axes(handles.axes1);
 theta = 0:1:360;
-plot(n*cos(theta),n*sin(theta));
+plot(r*cos(theta*pi/180),r*sin(theta*pi/180));
 axis([-20 20 -20 20]);
 axis square;
-set(handles.slider1,'value',n)
+set(handles.slider1,'value',r)
 % set(handles.slider1,'enable','on')
 
 % --- Executes during object creation, after setting all properties.
