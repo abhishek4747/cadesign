@@ -6,7 +6,7 @@ function [] = ellipse(a,b)
         y1(i) = b*sqrt(1-((x(i)*x(i))/(a*a)));
         y2(i) = -b*sqrt(1-((x(i)*x(i))/(a*a)));
     end
-    figure;
+    %figure;
     plot(x,y1);
     hold on;
     plot(x,y2);
