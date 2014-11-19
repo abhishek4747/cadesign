@@ -6,5 +6,5 @@ function [] = conical_helix(radius, height, rotations)
 	x = uni.*(radius*sin(t));
 	y = uni.*(radius*cos(t));
 
-	figure
+	%figure
 	plot3(x,y,z);

@@ -22,7 +22,7 @@ function varargout = bezier_gui(varargin)
 
 % Edit the above text to modify the response to help bezier_gui
 
-% Last Modified by GUIDE v2.5 19-Nov-2014 14:36:15
+% Last Modified by GUIDE v2.5 19-Nov-2014 15:15:35
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -57,6 +57,7 @@ handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
+generate_curve(handles)
 
 % UIWAIT makes bezier_gui wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
@@ -266,4 +267,14 @@ end
 set(hObject,'value',6);
 set(hObject,'max',20);
 set(hObject,'min',-20);
-generate_curve(handles)
+
+
+
+% --- Executes during object creation, after setting all properties.
+function axes1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate axes1
+

@@ -22,7 +22,7 @@ function varargout = cubic_gui(varargin)
 
 % Edit the above text to modify the response to help cubic_gui
 
-% Last Modified by GUIDE v2.5 12-Nov-2014 16:33:28
+% Last Modified by GUIDE v2.5 19-Nov-2014 15:16:17
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -111,6 +111,7 @@ function generate_curve(handles)
     plot(p2(1),p2(2),'o');
     %axis([min()-1 max()+1 min()-1 max()+1]);
     hold off;
+    p = get( handles.axes1, 'CurrentPoint' );
 
 
 % --- Executes during object creation, after setting all properties.
@@ -231,3 +232,12 @@ function t2_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes during object creation, after setting all properties.
+function axes1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate axes1

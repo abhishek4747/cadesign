@@ -5,5 +5,5 @@ function [] = cylindrical_helix(radius, height, rotations)
 	y = radius*cos(t);
 	z = ((t/pi)/(rotations/2))*height;
 
-	figure
+	%figure
 	plot3(x,y,z);
