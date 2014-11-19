@@ -12,31 +12,36 @@ cadesign : AML710 Assignments
 
 ## Q1: Square Root spiral
 
-Execute: square_root_spiral(5)
-Input: any integer
+Execute: square_root_spiral(n) where n is any integer
+Eg: square_root_spiral(5)
 
 
 ## Q2: Fibonacci Spiral 
 
-Execute: fibo(5)
-Input: any integer
+Execute: fibo(n) where n is any integer
+Eg: fibo(5)
 
 
 ## Q3: Spirals made of line segments
 
-Execute: lineSegmentSpirals(5)
-Input: any integer
+Execute: lineSegmentSpirals(n) where n is any integer
+Eg: lineSegmentSpirals(5)
 
 
 ## Q4: Fractals
 
-Execute: fractals(6)
-Input: any integer
+Execute: fractals(n) where n is any integer
+Eg: fractals(6)
 
 # Programming Assignments:
 
 
-Q1: 2D + 3D Transformations and Projections
+## Q1: 2D + 3D Transformations and Projections
+Example 1: Square
+Execute: square
+
+Example 2: Cube
+Execute: cube
 
 
 ## Q2: Plain Curves
@@ -74,7 +79,7 @@ Execute: mygui
 Example 2: Bezier surface
 Execute: bezierSurfaceGUI
 
-## All commands
+## All commands example
 
 >> square_root_spiral(5)
 

@@ -141,7 +141,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 set(hObject,'value',0);
-set(hObject,'max',360);
+set(hObject,'max',180);
 set(hObject,'min',0);
 
 
