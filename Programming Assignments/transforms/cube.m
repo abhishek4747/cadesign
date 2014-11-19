@@ -81,8 +81,14 @@ phi=0;
 psi=0;
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 
 % --- Executes on slider movement.
 function slider1_Callback(hObject, eventdata, handles)
@@ -100,8 +106,14 @@ phi=get(handles.slider3,'Value');
 psi=get(handles.slider4,'Value');
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.edit1,'string',s);
 
 % --- Executes during object creation, after setting all properties.
@@ -134,8 +146,14 @@ phi=get(handles.slider3,'Value');
 psi=get(handles.slider4,'Value');
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.edit2,'string',theta);
 
 % --- Executes during object creation, after setting all properties.
@@ -168,8 +186,14 @@ phi=get(handles.slider3,'Value');
 psi=get(handles.slider4,'Value');
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.edit3,'string',phi);
 
 % --- Executes during object creation, after setting all properties.
@@ -202,8 +226,14 @@ phi=get(handles.slider3,'Value');
 psi=get(handles.slider4,'Value');
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.edit4,'string',psi);
 
 % --- Executes during object creation, after setting all properties.
@@ -236,8 +266,14 @@ phi=str2double(get(handles.edit3,'String'));
 psi=str2double(get(handles.edit4,'String'));
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.slide1,'string',s);
 
 % --- Executes during object creation, after setting all properties.
@@ -269,8 +305,14 @@ phi=str2double(get(handles.edit3,'String'));
 psi=str2double(get(handles.edit4,'String'));
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.slide2,'string',theta);
 
 % --- Executes during object creation, after setting all properties.
@@ -302,8 +344,14 @@ phi=str2double(get(handles.edit3,'String'));
 psi=str2double(get(handles.edit4,'String'));
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.slider3,'string',phi);
 
 % --- Executes during object creation, after setting all properties.
@@ -335,8 +383,14 @@ phi=str2double(get(handles.edit3,'String'));
 psi=str2double(get(handles.edit4,'String'));
 p=points*rot3(theta*pi/180,phi*pi/180,psi*pi/180)*scale3(s);
 plot3(p(:,1), p(:,2), p(:,3));
+hold on;
+plot3(30*ones(size(p,1),1), p(:,2), p(:,3));
+plot3(p(:,1), 30*ones(size(p,1),1), p(:,3));
+plot3(p(:,1), p(:,2), -30*ones(size(p,1),1));
+hold off;
 axis([-30 30 -30 30 -30 30]);
 axis square;
+grid on;
 set(handles.slider4,'string',psi);
 
 % --- Executes during object creation, after setting all properties.
