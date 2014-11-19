@@ -15,6 +15,8 @@ function quadricSurface(A,B,C,D,E,F,G,H,I,J,isovalue)
        + 2*G*X + 2*H*Y + 2*I*Z...
        + J;
    %figure;
+   grid on;
+   view([135,20]);
    isosurface(X,Y,Z,S,isovalue);
 end
 
